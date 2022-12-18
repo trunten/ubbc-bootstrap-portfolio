@@ -1,10 +1,10 @@
 // Define the data for the chart
 const data = {
-  labels: ["HTML", "CSS", "JavaScript", "VBA"],
+  labels: ["HTML", "CSS", "Bootstrap", "JavaScript", "VBA"],
   datasets: [
     {
       label: "Language used (%)",
-      data: [40, 20, 5, 35,0],
+      data: [40, 20, 5, 7, 35,0],
       backgroundColor: [
         "rgba(255, 99, 132, 0.5)",
         "rgba(54, 162, 235, 0.5)",
@@ -36,10 +36,3 @@ const myChart = new Chart(ctx, {
     maintainAspectRatio: true,
   }
 });
-
-// Add event listeners to project images
-let projects = document.getElementsByClassName("projects");
-for (let p of projects) {
-  let a = p.getElementsByTagName("a").item(0)
-  p.addEventListener("click", function() { a.click(); })
-}

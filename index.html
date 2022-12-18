@@ -1,87 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Profesional portfolio of work for Jonathan Davis - front-end engineer">
     <title>Jonathan Davis' Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#top" id="topButton">Top</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div id="topButton"><a href="#top">Top</a></div>
     </nav>
-    <header>
-      <h1>Welcome to My Portfolio</h1>
-    </header>
-    <main>
-      <section id="about-me">
-        <h2>About Me</h2>
-        <div class="left">
-         <img src="./assets/images/profile.png" alt="My profile avatar">
-        </div>
-        <div class="right">
-          <p><span class="bold">Name:</span> Jonathan Davis</p>
-          <p><span class="bold">Profession:</span> Amateur Coder</p>
-        </div>
+
+    <header id="about" class="jumbotron jumbotron-fluid bg-white">
+      <div class="container">
+        <img src="./assets/images/profile.png" height="200px" alt="My profile avatar">
+        <h2 class="">Jonathan Davis</h2>
+        <p class="lead">Profession: Amateur Coder</p>
         <p>
           I'm a budding front-end developer based in Birmingham in the UK. I'm new to the game but full of enthusiasm and keen to work relentlessly to develop my skills and become an all round front-end specialist. 
           <br><br>I've only just begun my journey but have already completed a number of projects that I feel showcase the skills I've learned so far. Check out my projects below to see what I can do, and watch this space because I'm just going to get better and better as the weeks move on.
           <br><br>Like what you see? Feel free to <a href="#contact">contact me</a> any time, day or night.
-          
         </p>
-      </section>
-      <section id="projects">
-        <h2>Projects</h2>
-        <!-- Projects grid -->
-        <div id="my-grid">
-          <div id="p1" class="projects"><p><a href="https://trunten.github.io/jakes-eatery/" target="_blank">Jake's Eatery</a><br><span class="small">&nbsp; html / css</span></p></div><!-- https://github.com/trunten/jakes-eatery -->
-          <div id="p2" class="projects"><p><a href="https://trunten.github.io/horizon-code-refactor/" target="_blank">Horiseon SEO website</a><br><span class="small">&nbsp; html / css</span></p></div><!-- https://github.com/trunten/horizon-code-refactor -->
-          <div id="p3" class="projects"><p><a href="https://trunten.github.io/css-cheatsheet/" target="_blank">CSS Cheatsheet</a><br><span class="small">&nbsp; html / css / javascript</span></p></div><!-- https://github.com/trunten/css-cheatsheet -->
-          <div id="p4" class="projects"><p><a href="https://trunten.github.io/css-landing-page/" target="_blank">CSS Design Project</a><br><span class="small">&nbsp; html / css</span></p></div><!-- https://github.com/trunten/css-landing-page -->
-          <div id="p5" class="projects"><p><a href="https://trunten.github.io/prework-study-guide/" target="_blank">Study Guide</a><br><span class="small">&nbsp; html / css / javascript</span></div><!-- https://github.com/trunten/prework-study-guide -->
-          <div id="p6" class="projects"><p><a href="https://trunten.github.io/js-canvas-pong/" target="_blank">Pong Game</a><br><span class="small">&nbsp; html / javascript</span></p></div>
-          <div id="p7" class="projects"><p><a href="https://trunten.github.io/python-gui-test/" target="_blank">Project 7</a><br><span class="small">&nbsp; watch this space</span></p></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Projects -->
+      <section class="container-fluid" id="projects">
+        <h2 class="display-4 text-center pt-5">Projects</h2>
+        <div class="row">
+          <div id="p1" class="col-sm-12 col-md-8 col-lg-6">
+            <div class="card">
+              <img src="./assets/images/diner.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Jake's Eatery</h5>
+                <p class="card-text"><span class="small">html / css</span></p>
+                <a href="https://trunten.github.io/jakes-eatery/" target="_blank" class="btn btn-primary">Deployed Site</a>
+              </div>
+            </div>
+          </div>
+          <div id="p2" class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="./assets/images/seo.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Horiseon SEO</h5>
+                <p class="card-text"><span class="small">html / css</span></p>
+                <a href="https://trunten.github.io/horizon-code-refactor/" target="_blank" class="btn btn-primary">Deployed Site</a>
+              </div>
+            </div>
+          </div>
+          <div id="p3" class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="./assets/images/css.jpg">
+              <div class="card-body">
+                <h5 class="card-title">CSS Cheatsheet</h5>
+                <p class="card-text"><span class="small">html / css / javascript</span></p>
+                <a href="https://trunten.github.io/css-cheatsheet/" target="_blank" class="btn btn-primary">Deployed Site</a>
+              </div>
+            </div>
+          </div>
+          <div id="p4" class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="./assets/images/design.jpg">
+              <div class="card-body">
+                <h5 class="card-title">CSS Design Project</h5>
+                <p class="card-text"><span class="small">html / css</span></p>
+                <a href="https://trunten.github.io/css-landing-page/" target="_blank" class="btn btn-primary">Deployed Site</a>
+              </div>
+            </div>
+          </div>
+          <div id="p5" class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="./assets/images/study_guide.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Study Guide</h5>
+                <p class="card-text"><span class="small">html / css / javascript</span></p>
+                <a href="https://trunten.github.io/prework-study-guide/" target="_blank" class="btn btn-primary">Deployed Site</a>
+              </div>
+            </div>
+          </div>
+          <div id="p6" class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="./assets/images/pong.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Pong Game</h5>
+                <p class="card-text"><span class="small">html / javascript</span></p>
+                <a href="https://trunten.github.io/js-canvas-pong/" target="_blank" class="btn btn-primary">Deployed Site</a>
+              </div>
+            </div>
+          </div>
+          <div id="p7" class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="./assets/images/placeholder1.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Project 7</h5>
+                <p class="card-text"><span class="small">watch this space</span></p>
+                <a href="https://trunten.github.io/python-gui-test/" target="_blank" class="btn btn-primary">Deployed Site</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <section id="skills">
-        <h2>Skills</h2>
+
+      <!-- Skills -->
+      <section id="skills" class="container-fluid">
+        <h2 class="display-4 text-center my-4">Skills</h2>
         <!-- Bar Chart - from https://www.chartjs.org -->
         <canvas id="my-chart" title="Bar chart" aria-label="Bar Chart of Languages I have used by percentage" role="img"></canvas>
       </section>
     </main>
-    <footer id="contact">
-      <h2>Contact</h2> <!-- NB. Email & social profile links intentionally none functional to avoid anything being misused -->
-      <ul>
-        <!-- 
-          Licencing! Blue Email Icon PNG icons - The pictures are free for personal and even for commercial use. 
-          You can modify, copy and distribute the vectors on Blue Email Icon in iconspng.com all without asking 
-          for permission or setting a link to the source. So, attribution is not required. 
-        -->
-        <li><a href="mailto:jonathan@davis.com"><img src="./assets/images/email.png" alt="Email icon with email link"><br><span class="small">Email</span></a></li>
-        <!-- https://iconscout.com/contributors/pixel-icons -->
-        <li><a href="https://twitter.com/username" target="_blank"><img src="./assets/images/twitter.png" alt="Twitter icon with profile link"><br><span class="small">Twitter</span></a></li>
-        <!-- https://iconscout.com/contributors/pixel-icons -->
-        <li><a href="https://linkedin.com/in/username" target="_blank"><img src="./assets/images/linkedin.png" alt="LinkedIn icon with profile link"><br><span class="small">LinkedIn</span></a></li>
-        <!-- https://iconscout.com/contributors/pixel-icons -->
-        <li><a href="https://www.facebook.com/username" target="_blank"><img src="./assets/images/fb.png" alt="Facebook icon with profile link"><br><span class="small">Facebook</span></a></li>
-        <!-- https://iconscout.com/icons/developer-tool -->
-        <li><a href="https://github.com/trunten" target="_blank"><img src="./assets/images/github.png" alt="Facebook icon with profile link"><br><span class="small">GitHub</span></a></li>
-      </ul>
-      <div id="phoneNum">
-        <p>Tel: <a href="tel:+441211211211">0121 121 1211</a><span class="divider">|</span>Mob: <a href="tel:+447123456789">07123 456 789</a></p>
-        <!-- <p>&copy; Jonathan Davis 2022</p> -->
-      </div>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <script src="./assets/scripts/script.js"></script>
+
+      <!-- Contact -->
+      <footer class="container-fluid text-center" id="contact">
+        <h2 class="display-4 mt-5 mb-4">Contact</h2> <!-- NB. Email & social profile links intentionally none functional to avoid anything being misused -->
+        <ul class="p-0">
+          <li><a href="mailto:jonathan@davis.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/username" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="https://linkedin.com/in/username" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/username" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/trunten" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        </ul>
+        <div id="phoneNum">
+          <p>Tel: <a href="tel:+441211211211">0121 121 1211</a><span class="mx-3">|</span>Mob: <a href="tel:+447123456789">07123 456 789</a></p>
+        </div>
+      </footer>
+      <!-- Bootstrap scripts -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+      <!-- Chart.js -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+      <!-- My Sripts -->
+      <script src="./assets/scripts/script.js"></script>
   </body>
 </html>
