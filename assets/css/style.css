@@ -1,0 +1,359 @@
+/* vars */
+:root {
+  --my-grey: rgba(52, 58, 64, 0.95);
+  --near-black: rgb(52, 58, 64);
+  --near-white: rgb(248,249,250);
+}
+
+/* Smooth scrolling */
+html {
+	scroll-behavior: smooth;
+}
+
+/* General styles */
+body {
+  font-family: sans-serif;
+  color: var(--near-black);
+  margin: 0;
+  background-color: var(--near-white);
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.projects a {
+  padding: 5px;
+}
+
+nav a {
+  padding: 15px;
+  color: var(--near-white);
+}
+
+nav a:hover {
+  color: var(--near-black);
+  text-decoration: none;
+  background-color: var(--near-white);
+}
+
+.projects a:hover {
+  color: var(--near-white);
+  text-decoration: none;
+  background-color: var(--near-black);
+}
+
+section, footer {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.small {
+  font-size: 0.7em;
+}
+
+.divider {
+  margin: 0 10px;
+}
+
+/* Define style for headings */
+h1, h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 2.5em;
+  padding:  0 20px;
+  color: var(--near-white)
+}
+
+h2 {
+  font-size: 2em;
+  padding-top: 50px;
+  text-align: center;
+  color: var(--near-black);
+}
+
+/* Define the style for unordered lists */
+ul {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: var(--near-black);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: var(--near-black);
+}
+
+/* About me styles */
+.left, .right {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.left {
+  text-align: right;
+}
+
+.right {
+  text-align: left;
+}
+
+.left img {
+  max-height: 200px;
+  border-radius: 100%;
+  padding: 10px 0px 30px 10px;
+  margin-right: 20px;
+}
+
+#about-me {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#about-me p:last-of-type {
+  text-align: left;
+}
+
+#about-me p:last-of-type > a {
+  padding: 0;
+  margin: 0;
+  color: blue;
+}
+
+/* Projects grid section */
+#my-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 30px;
+  margin: 0 50px;
+  grid-template-areas: "p1 p1 p2" "p3 p4 p5" "p6 p7 .";
+}
+
+.projects {
+  height: 250px; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-self: stretch;
+  cursor: pointer;
+  background-color: var(--my-grey);
+}
+
+.projects:hover {
+  /*
+    Box shaddow property order :
+    Horizontal Length | Vertical Length  | Blur Radius | Spread Radius | Shaddow colour 
+  */
+  box-shadow: 0px 0px 25px -3px rgba(0,0,0,0.75);
+  transition: all 0.4s ease-in-out;
+}
+
+.projects p {
+  padding: 10px;
+  background-color: rgba(227, 227, 227, 0.85);
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
+
+/* Background images from https://unsplash.com */
+#p1 {
+  grid-area: p1;
+  background-image: url(../images/diner.jpg);
+  background-position: 0 50%;
+}
+
+#p2 {
+  grid-area: p2;
+  background-image: url(../images/seo.jpg);
+}
+
+#p3 {
+  grid-area: p3;
+  background-image: url(../images/css.jpg);
+  background-position: 80% 0;
+}
+
+#p4 {
+  grid-area: p4;
+  background-image: url(../images/design.jpg);
+}
+
+#p5 {
+  grid-area: p5;
+  background-image: url(../images/study_guide.jpg);
+}
+
+#p6 {
+  grid-area: p6;
+  background-image: url(../images/pong.jpg);
+  background-position: 0% 50%;
+}
+
+#p7 {
+  grid-area: p7;
+  background-image: url(../images/placeholder1.jpg);
+}
+
+/* Contact section */
+#contact li, nav li {
+  display: inline-block;
+}
+
+#contact img {
+  margin: 10px 30px;
+  max-height: 35px;
+}
+
+#contact {
+  margin-bottom: 80px;
+}
+
+#phoneNum {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+#phoneNum a {
+  color:blue;
+}
+
+/* nav menu */
+nav {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: var(--near-white);
+  background-color: var(--my-grey);
+  padding: 15px 5px;
+}
+
+/* Header section */
+header {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: #333;
+  background-color: var(--my-grey);
+  margin-top: 48px;
+}
+
+/* Define the font, size, and color for the main element */
+main {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: var(--near-black);
+}
+
+/* Make the nav element fixed at the top of the page */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+
+/* Chart from https://www.chartjs.org */
+/* Chart style */
+canvas {
+  margin-top: 50px;
+  max-height: 500px;
+  max-width: 500px;
+}
+
+/* Make the chart responsive */
+#my-chart {
+width: 100%;
+height: auto;
+margin: 25px auto;
+}
+
+/* Scroll to top "button" (fixed at bottom of page) */
+#topButton {
+  position: fixed;
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99;
+  background-color: rgba(40, 110, 246, 0.85);
+  color: white;
+  padding: 10px; 
+  border-radius: 8px; 
+}
+
+#topButton:hover {
+  background-color:rgb(218, 47, 61);
+}
+  
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  /* https://stackoverflow.com/questions/10933837/line-break-like-br-using-only-css */
+  .bold:after {
+    content:"\a";
+    white-space: pre;
+  }
+
+  #contact img {
+    margin: 10px 20px;
+    max-height: 30px;
+  }
+	
+  #topButton {
+    bottom: 10px; 
+    right: 15px; 
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #my-grid {
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6" "p7";
+  }
+
+  .left img {
+    max-width: 120px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1100px) {
+  #my-grid {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "p1 p1" "p2 p3" "p4 p5" "p6 p7";
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .projects {
+    height: 330px;
+  }
+
+  #my-grid {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p7";
+  }
+}

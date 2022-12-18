@@ -2,45 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description" content="Profesional portfolio of work for Jonathan Davis - front-end engineer">
+    <title>Jonathan Davis' Portfolio</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Jonathan Davis Portfolio</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="./assets/images/logo.PNG" height="50px"></a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link text-primary" href="#">About</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-primary" href="#">Projects</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-primary" href="#">Skills</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-primary" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#top" id="topButton">Top</a></li>
+      </ul>
     </nav>
-    <div class="container-fluid">
-        <h1 class="display-4  text-right">Jonathan Davis</h1>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <header>
+      <h1>Welcome to My Portfolio</h1>
+    </header>
+    <main>
+      <section id="about-me">
+        <h2>About Me</h2>
+        <div class="left">
+         <img src="./assets/images/profile.png" alt="My profile avatar">
+        </div>
+        <div class="right">
+          <p><span class="bold">Name:</span> Jonathan Davis</p>
+          <p><span class="bold">Profession:</span> Amateur Coder</p>
+        </div>
+        <p>
+          I'm a budding front-end developer based in Birmingham in the UK. I'm new to the game but full of enthusiasm and keen to work relentlessly to develop my skills and become an all round front-end specialist. 
+          <br><br>I've only just begun my journey but have already completed a number of projects that I feel showcase the skills I've learned so far. Check out my projects below to see what I can do, and watch this space because I'm just going to get better and better as the weeks move on.
+          <br><br>Like what you see? Feel free to <a href="#contact">contact me</a> any time, day or night.
+          
+        </p>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <!-- Projects grid -->
+        <div id="my-grid">
+          <div id="p1" class="projects"><p><a href="https://trunten.github.io/jakes-eatery/" target="_blank">Jake's Eatery</a><br><span class="small">&nbsp; html / css</span></p></div><!-- https://github.com/trunten/jakes-eatery -->
+          <div id="p2" class="projects"><p><a href="https://trunten.github.io/horizon-code-refactor/" target="_blank">Horiseon SEO website</a><br><span class="small">&nbsp; html / css</span></p></div><!-- https://github.com/trunten/horizon-code-refactor -->
+          <div id="p3" class="projects"><p><a href="https://trunten.github.io/css-cheatsheet/" target="_blank">CSS Cheatsheet</a><br><span class="small">&nbsp; html / css / javascript</span></p></div><!-- https://github.com/trunten/css-cheatsheet -->
+          <div id="p4" class="projects"><p><a href="https://trunten.github.io/css-landing-page/" target="_blank">CSS Design Project</a><br><span class="small">&nbsp; html / css</span></p></div><!-- https://github.com/trunten/css-landing-page -->
+          <div id="p5" class="projects"><p><a href="https://trunten.github.io/prework-study-guide/" target="_blank">Study Guide</a><br><span class="small">&nbsp; html / css / javascript</span></div><!-- https://github.com/trunten/prework-study-guide -->
+          <div id="p6" class="projects"><p><a href="https://trunten.github.io/js-canvas-pong/" target="_blank">Pong Game</a><br><span class="small">&nbsp; html / javascript</span></p></div>
+          <div id="p7" class="projects"><p><a href="https://trunten.github.io/python-gui-test/" target="_blank">Project 7</a><br><span class="small">&nbsp; watch this space</span></p></div>
+        </div>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <!-- Bar Chart - from https://www.chartjs.org -->
+        <canvas id="my-chart" title="Bar chart" aria-label="Bar Chart of Languages I have used by percentage" role="img"></canvas>
+      </section>
+    </main>
+    <footer id="contact">
+      <h2>Contact</h2> <!-- NB. Email & social profile links intentionally none functional to avoid anything being misused -->
+      <ul>
+        <!-- 
+          Licencing! Blue Email Icon PNG icons - The pictures are free for personal and even for commercial use. 
+          You can modify, copy and distribute the vectors on Blue Email Icon in iconspng.com all without asking 
+          for permission or setting a link to the source. So, attribution is not required. 
+        -->
+        <li><a href="mailto:jonathan@davis.com"><img src="./assets/images/email.png" alt="Email icon with email link"><br><span class="small">Email</span></a></li>
+        <!-- https://iconscout.com/contributors/pixel-icons -->
+        <li><a href="https://twitter.com/username" target="_blank"><img src="./assets/images/twitter.png" alt="Twitter icon with profile link"><br><span class="small">Twitter</span></a></li>
+        <!-- https://iconscout.com/contributors/pixel-icons -->
+        <li><a href="https://linkedin.com/in/username" target="_blank"><img src="./assets/images/linkedin.png" alt="LinkedIn icon with profile link"><br><span class="small">LinkedIn</span></a></li>
+        <!-- https://iconscout.com/contributors/pixel-icons -->
+        <li><a href="https://www.facebook.com/username" target="_blank"><img src="./assets/images/fb.png" alt="Facebook icon with profile link"><br><span class="small">Facebook</span></a></li>
+        <!-- https://iconscout.com/icons/developer-tool -->
+        <li><a href="https://github.com/trunten" target="_blank"><img src="./assets/images/github.png" alt="Facebook icon with profile link"><br><span class="small">GitHub</span></a></li>
+      </ul>
+      <div id="phoneNum">
+        <p>Tel: <a href="tel:+441211211211">0121 121 1211</a><span class="divider">|</span>Mob: <a href="tel:+447123456789">07123 456 789</a></p>
+        <!-- <p>&copy; Jonathan Davis 2022</p> -->
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="./assets/scripts/script.js"></script>
-
-</body>
+  </body>
 </html>
