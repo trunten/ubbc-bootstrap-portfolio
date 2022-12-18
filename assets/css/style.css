@@ -22,7 +22,8 @@ html {
   background-attachment: fixed;
   background-position: 50% 50%;
   color:white !important;
-  height:96vh;
+  min-height: 96vh;
+  max-height: 100%;
 }
 
 .jumbotron a:hover {
