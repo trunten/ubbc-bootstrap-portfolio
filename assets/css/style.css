@@ -67,6 +67,12 @@ html {
   font-size: 20px;
 }
 
+@media screen and (max-width: 500px) {
+  #contact li {
+    margin: 10px -8px 0px -8px;
+  }
+}
+
 #contact i {
   padding: 11px 0;
   border: 1px solid var(--my-grey);
