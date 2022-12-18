@@ -14,15 +14,19 @@ html {
 /* About section */
 /* ------------- */
 .jumbotron{
-  background: 
-    linear-gradient(rgba(0, 0, 250, 0.25),rgba(125, 250, 250, 0.45)),
-    url(https://source.unsplash.com/1600x1050/?computer+screen);
+  background: linear-gradient(rgba(210, 210, 210, 0.8),rgba(0, 0, 0, 0.9)), url(../images/laptop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: 80% 0%;
   color:white !important;
-  height:100vh;
+  height:96vh;
 }
+
+.jumbotron a:hover {
+  color: rgb(255, 193, 7) !important;
+}
+
 /* End of About section */
 
 /* --------------- */
@@ -124,4 +128,5 @@ margin: 25px auto;
 
 #topButton:hover {
   background-color:rgb(218, 47, 61);
+  text-decoration: none;
 }
