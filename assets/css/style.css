@@ -44,12 +44,19 @@ html {
   object-fit: cover;
   object-position: 50% 50%;
   height: 230px; 
+  opacity: 0.75;
+  transition: opacity 0.5s ease-in-out;
 }
 
-#projects .card:hover{
+#projects .card:hover {
   transform: translateY(-2px);
   box-shadow: 0px 5px 10px 0px grey;
   transition: all 0.5s ease-in-out;
+}
+
+#projects .card:hover img {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
 /* End of Project section */
 
@@ -89,6 +96,19 @@ html {
   transform: translateY(-2px);
   box-shadow: 0px 5px 10px 0px grey;   /* Horizontal Length | Vertical Length  | Blur Radius | Spread Radius | Shaddow colour */
   transition: all 0.5s ease-in-out;
+}
+
+#contact i:hover::after {
+  content: attr(text) !important;
+  display: block;
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  color: black;
 }
 
 #contact {
