@@ -1,4 +1,4 @@
-//Just an exmaple as an aide memoire. needs a valid token from https://github.com/settings/tokens
+// Just an exmaple as an aide memoire. needs a valid token from https://github.com/settings/tokens
 // Unauthenticated requests are rate limited but won't be a problem for a demo site like this.
 // const opt = {headers: {'Authorization': 'token ghp_kjdhfkjdhfkjhdfjhdflkjY'}} 
 const opt = {};
@@ -61,7 +61,8 @@ fetch(apiUrl, opt)
     console.log(e);
 });
 
-//https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+// https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+// https://hackernoon.com/a-beginners-guide-to-javascripts-the-intersection-observer-api-j8s32rb
 const progressBars = document.querySelectorAll(".progress-bar");
 for (el of progressBars) {
     const sectionObserver = new IntersectionObserver((el) => { 
