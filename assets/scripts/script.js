@@ -63,15 +63,15 @@ fetch(apiUrl, opt)
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 // https://hackernoon.com/a-beginners-guide-to-javascripts-the-intersection-observer-api-j8s32rb
-const progressBars = document.querySelectorAll(".progress-bar");
-for (el of progressBars) {
-    const sectionObserver = new IntersectionObserver((el) => { 
-        const [bar] = el;
-        if (bar.isIntersecting) {
-            bar.target.classList.remove('zero');
-        } else {
-            bar.target.classList.add('zero');
-        } 
-    }, { root: null, threshold: 0.3, rootMargin: "0" });
-    sectionObserver.observe(el);
-}
+// const progressBars = document.querySelectorAll(".progress-bar");
+// for (el of progressBars) {
+//     const sectionObserver = new IntersectionObserver((el) => { 
+//         const [bar] = el;
+//         if (bar.isIntersecting) {
+//             bar.target.classList.remove('zero');
+//         } else {
+//             bar.target.classList.add('zero');
+//         } 
+//     }, { root: null, threshold: 0.3, rootMargin: "0" });
+//     sectionObserver.observe(el);
+// }
