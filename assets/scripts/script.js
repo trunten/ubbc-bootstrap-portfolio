@@ -1,4 +1,6 @@
-// const opt = {headers: {'Authorization': 'token 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'}}
+//Just an exmaple as an aide memoire. needs a valid token from https://github.com/settings/tokens
+// Unauthenticated requests are rate limited but won't be a problem for a demo site like this.
+// const opt = {headers: {'Authorization': 'token ghp_kjdhfkjdhfkjhdfjhdflkjY'}} 
 const opt = {};
 const username = 'trunten';
 let apiUrl = `https://api.github.com/users/${username}/repos`;
