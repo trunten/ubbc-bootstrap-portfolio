@@ -39,7 +39,7 @@ N/A
 - Bar Chart - https://www.chartjs.org
 - Project images & jumbotron background - https://unsplash.com
 - Background image styling: https://codepen.io/waltir/pen/prGZPp
-
+- Scoll into view effect - https://codepen.io/tutsplus/pen/QWGYKMN
 
 ## License
 Please refer to the [LICENSE (MIT)](LICENSE) in the repo.
