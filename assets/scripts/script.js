@@ -59,6 +59,7 @@ fetch(apiUrl, opt)
     console.log(e);
 });
 
+// https://codepen.io/tutsplus/pen/QWGYKMN
 window.addEventListener('scroll', () => { 
   const progressBars = document.querySelectorAll('.progress-bar');
   progressBars.forEach((el) => {
