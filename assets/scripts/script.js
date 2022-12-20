@@ -1,7 +1,7 @@
-const opt = {headers: {'Authorization': 'token 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'}}
-// const opt = {};
-const username = 'trunten' //your username here
-const apiUrl = `https://api.github.com/users/${username}/repos`;
+// const opt = {headers: {'Authorization': 'token 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'}}
+const opt = {};
+const username = 'trunten';
+let apiUrl = `https://api.github.com/users/${username}/repos`;
 
 fetch(apiUrl, opt)
 .then((response) => {
