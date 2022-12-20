@@ -61,15 +61,16 @@ fetch(apiUrl, opt)
     console.log(e);
 });
 
-// https://codepen.io/tutsplus/pen/QWGYKMN
-window.addEventListener('scroll', () => { 
-  const progressBars = document.querySelectorAll('.progress-bar');
-  progressBars.forEach((el) => {
-    const elementTop = el.getBoundingClientRect().top;
-    if (elementTop <= (window.innerHeight || document.documentElement.clientHeight)) {
-        el.classList.remove('zero');
-    } else if (elementTop > (window.innerHeight || document.documentElement.clientHeight)) {
-        el.classList.add('zero')
-    }
-  })
-});
+//https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+const progressBars = document.querySelectorAll(".progress-bar");
+for (el of progressBars) {
+    const sectionObserver = new IntersectionObserver((el) => { 
+        const [bar] = el;
+        if (bar.isIntersecting) {
+            bar.target.classList.remove('zero');
+        } else {
+            bar.target.classList.add('zero');
+        } 
+    }, { root: null, threshold: 0.3, rootMargin: "0" });
+    sectionObserver.observe(el);
+}
