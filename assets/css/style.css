@@ -141,6 +141,10 @@ width: 100%;
 height: auto;
 margin: 25px auto;
 }
+
+.zero {
+  width: 0 !important;
+}
 /* End of Skills sections */
 
 /* Scroll to top "button" (fixed at bottom of page) */

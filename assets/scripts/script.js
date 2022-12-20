@@ -58,3 +58,15 @@ fetch(apiUrl, opt)
 .catch((e) => {
     console.log(e);
 });
+
+window.addEventListener('scroll', () => { 
+  const progressBars = document.querySelectorAll('.progress-bar');
+  progressBars.forEach((el) => {
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop <= (window.innerHeight || document.documentElement.clientHeight)) {
+        el.classList.remove('zero');
+    } else if (elementTop > (window.innerHeight || document.documentElement.clientHeight)) {
+        el.classList.add('zero')
+    }
+  })
+});
