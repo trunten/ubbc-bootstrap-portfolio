@@ -38,9 +38,6 @@ N/A
 ## Credits
 - Project images & jumbotron background: https://unsplash.com
 - Background image styling: https://codepen.io/waltir/pen/prGZPp
-- Scoll into view effect:
-  - https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
-  - https://hackernoon.com/a-beginners-guide-to-javascripts-the-intersection-observer-api-j8s32rb
 
 ## License
 Please refer to the [LICENSE (MIT)](LICENSE) in the repo.
