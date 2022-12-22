@@ -17,7 +17,6 @@ if (window.location.hostname === '127.0.0.1') {
 }
 
 function githubLanguages (opt) {
-    console.log(opt);
     fetch(apiUrl, opt)
     .then((response) => {
         if (response.ok) {
