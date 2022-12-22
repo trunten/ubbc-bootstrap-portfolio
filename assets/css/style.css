@@ -41,7 +41,7 @@ html {
 /* --------------- */
 /* Project section */
 /* --------------- */
-.card-body {
+#projects .card-body {
   background-color: rgb(243, 243, 243);
 }
 

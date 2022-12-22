@@ -76,15 +76,15 @@ function githubLanguages (opt) {
 }
 
 // Add event listeners to project images
-let projects = document.getElementsByClassName("card");
+let projects = document.getElementsByClassName('card');
 for (let p of projects) {
-  let a = p.getElementsByTagName("a").item(0)
-  p.addEventListener("click", function() { a.click(); })
+  let a = p.getElementsByTagName('a').item(0)
+  p.addEventListener('click', function() { a.click(); })
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 // https://hackernoon.com/a-beginners-guide-to-javascripts-the-intersection-observer-api-j8s32rb
-const progressBars = document.querySelectorAll(".progress-bar");
+const progressBars = document.querySelectorAll('.progress-bar');
 for (el of progressBars) {
     const sectionObserver = new IntersectionObserver((el) => { 
         const [bar] = el;
@@ -93,6 +93,6 @@ for (el of progressBars) {
         } else {
             bar.target.classList.add('zero');
         } 
-    }, { root: null, threshold: 0.3, rootMargin: "0" });
+    }, { root: null, threshold: 0.3, rootMargin: '0' });
     sectionObserver.observe(el);
 }
