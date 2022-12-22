@@ -29,7 +29,7 @@ N/A
 ## Usage
 - [Link to deployed site](https://trunten.github.io/ubbc-bootstrap-portfolio/)
 - Jump to each section on the page by clicking the links in the navigation bar
-- Click on any of the buttons in the project cards to open up the deployed application in a new window/tab
+- Click on any of the buttons in the project cards (visbile on hover), or the project card itself to open up the deployed application in a new window/tab
 - Scroll back to the top at any time by clicking on the "Top" button in the lower right corner
 - Contact me through email, phone or any of my social media profiles using the links provided in the contact section (***disabled currently to avoid information leak***)
 - Preview of the finished site:
