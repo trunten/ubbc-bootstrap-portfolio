@@ -10,14 +10,12 @@ html {
 	scroll-behavior: smooth;
 }
 
+
 /* ------------- */
-/* About section */
+/* Hero/About section */
 /* ------------- */
 .jumbotron{
-  /* background: linear-gradient(rgba(210, 210, 210, 0.8),rgba(0, 0, 0, 0.9)), url(../images/laptop.jpg); */
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(210, 210, 210, 0.8)), url(../images/laptop.jpg);
-  /* background: linear-gradient(rgba(210, 210, 210, 0.8),rgba(0, 0, 0, 0.9)), url(../images/avatar.gif); */
-  /* background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(210, 210, 210, 0.8)), url(../images/avatar.gif); */
   background-size: cover;
   background-attachment: fixed;
   background-position: 50% 50%;
@@ -29,36 +27,62 @@ html {
 .jumbotron a:hover {
   color: rgb(255, 193, 7) !important;
 }
+/* End of Hero/About section */
 
-/* End of About section */
 
 /* --------------- */
 /* Project section */
 /* --------------- */
 #projects .card {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
   margin: 10px 0;
+  cursor: pointer;
+}
+
+#projects .img-wrapper {
+  background-color:gray;
 }
 
 #projects .card img { 
   object-fit: cover;
   object-position: 50% 50%;
-  height: 230px; 
-  opacity: 0.75;
-  transition: opacity 0.5s ease-in-out;
+  height: 250px; 
+  /* opacity: 0.99; */
+  transition: opacity 0.4s ease-in-out;
+}
+
+#projects .card a {
+  position: absolute;
+  top: 35%;
+  left: calc((100% / 2) - 60px);
+  display: none;
+  z-index: 99;
+  transition: all 0.4s ease-in-out;
+  background-color: rgba(0,0,0,0.2);
+}
+
+#projects .card a:hover {
+  background-color: rgba(255,255,255,0.8);
+  color: darkslategrey;
 }
 
 #projects .card:hover {
   transform: translateY(-2px);
   box-shadow: 0px 5px 10px 0px grey;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 #projects .card:hover img {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0.3;
+}
+
+#projects .card:hover a {
+  display: block;
+  transition: all 0.4s ease-in-out;
 }
 /* End of Project section */
+
 
 /* --------------- */
 /* Contact section */
@@ -87,15 +111,16 @@ html {
   color: white;
   border-radius: 30px;
   width: 45px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #contact i:hover {
   border: 1px solid #5387ff;
   background-color: #5387ff;
   transform: translateY(-2px);
-  box-shadow: 0px 5px 10px 0px grey;   /* Horizontal Length | Vertical Length  | Blur Radius | Spread Radius | Shaddow colour */
-  transition: all 0.5s ease-in-out;
+  /* Horizontal Length | Vertical Length  | Blur Radius | Spread Radius | Shaddow colour */
+  box-shadow: 0px 5px 10px 0px grey;   
+  transition: all 0.3s ease-in-out;
 }
 
 #contact i:hover::after {
@@ -125,27 +150,15 @@ html {
 }
 /* End of Contact section */
 
+
 /* -------------- */
 /* Skills section */
 /* -------------- */
-/* Chart from https://www.chartjs.org */
-canvas {
-  margin-top: 50px;
-  max-height: 500px;
-  max-width: 500px;
-}
-
-/* Make the chart responsive */
-#my-chart {
-width: 100%;
-height: auto;
-margin: 25px auto;
-}
-
 .zero {
   width: 0 !important;
 }
 /* End of Skills sections */
+
 
 /* Scroll to top "button" (fixed at bottom of page) */
 #topButton {

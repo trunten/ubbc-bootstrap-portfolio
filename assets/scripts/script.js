@@ -4,7 +4,7 @@
 const opt = {};
 const username = 'trunten';
 let apiUrl = `https://api.github.com/users/${username}/repos`;
-
+if (false) {
 fetch(apiUrl, opt)
 .then((response) => {
     if (response.ok) {
@@ -60,6 +60,14 @@ fetch(apiUrl, opt)
 .catch((e) => {
     console.log(e);
 });
+}
+
+// Add event listeners to project images
+let projects = document.getElementsByClassName("card");
+for (let p of projects) {
+  let a = p.getElementsByTagName("a").item(0)
+  p.addEventListener("click", function() { a.click(); })
+}
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 // https://hackernoon.com/a-beginners-guide-to-javascripts-the-intersection-observer-api-j8s32rb
