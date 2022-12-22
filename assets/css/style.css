@@ -12,6 +12,14 @@ html {
 
 
 /* ------------- */
+/* Navbar section */
+/* ------------- */
+.nav-item a:hover{
+  color: white !important;
+}
+/* End of navbar section */
+
+/* ------------- */
 /* Hero/About section */
 /* ------------- */
 .jumbotron{
@@ -33,6 +41,10 @@ html {
 /* --------------- */
 /* Project section */
 /* --------------- */
+.card-body {
+  background-color: rgb(243, 243, 243);
+}
+
 #projects .card {
   transition: all 0.4s ease-in-out;
   margin: 10px 0;
