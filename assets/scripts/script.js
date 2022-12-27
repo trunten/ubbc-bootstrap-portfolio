@@ -63,8 +63,7 @@ function githubLanguages (opt) {
                         bar.style.width = p
                     } else {
                         //just for testing when not in project
-                        document.write(l,' ', p);
-                        document.write('<br>');
+                        console.log(l,' ', p);
                     }
                 }
             });
