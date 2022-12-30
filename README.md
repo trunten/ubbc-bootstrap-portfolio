@@ -38,6 +38,7 @@ N/A
 
 ## Credits
 - Project images & jumbotron background: https://unsplash.com
+- Rock Paper Scissors Image: Human Vectors by Vecteezy - https://www.vecteezy.com/free-vector/human
 - Background image styling: https://codepen.io/waltir/pen/prGZPp
 - Antimate on scroll effect:
   - https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
