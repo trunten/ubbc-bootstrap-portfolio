@@ -17,6 +17,7 @@ if (window.location.hostname === '127.0.0.1') {
 }
 
 function githubLanguages (opt) {
+    // Fetch a list of all my repos
     fetch(apiUrl, opt)
     .then((response) => {
         if (response.ok) {
@@ -25,22 +26,28 @@ function githubLanguages (opt) {
     })
     .then((data) => {
         languagePromises = [];
+        // loop over the returned repos nd pull out the languages api url
+        // so long as the repo contains code and is not a fork of someone else
         for (let i in data) {
             let repo = data[i];
             if (!repo['fork'] && repo['language']) {
-                // console.log(repo['name'], repo['language']);
                 let langs = repo['languages_url'];
+                // Batch up all th promises in an array so I can ensure
+                // they've all resolved before processing them.
                 languagePromises.push(fetch(langs, opt))
             }
         }
         Promise.all(languagePromises)
         .then((responses) => { 
+            // .json() returns a promise too so repeat same batching
+            //  to ensure all are resolved before processing
             let languages = [];
             for (let r of responses) {
                 if (r.ok) languages.push(r.json())
             }
             Promise.all(languages)
             .then((resolved) => { 
+                // loop over all the returned lanuages and add up each unique language
                 let languageTotals = {};
                 for (langData of resolved) {
                     for (lang in langData) {
@@ -51,8 +58,12 @@ function githubLanguages (opt) {
                     }
                 }
                 // console.log(languageTotals);
+                
+                // get the sum of verything so I can calculate percentages
                 let sum = 0;
                 for (let l in languageTotals) { sum += languageTotals[l] }
+                
+                // work out the percentage of each language and update progress bars with results
                 for (let l in languageTotals) {
                     let p = (languageTotals[l] / sum * 100).toFixed(0);
                     p = (p < 1 ? 1 : p) + '%'
@@ -63,7 +74,7 @@ function githubLanguages (opt) {
                         bar.style.width = p
                     } else {
                         //just for testing when not in project
-                        console.log(l,' ', p);
+                        // console.log(l, p);
                     }
                 }
             });
@@ -74,7 +85,7 @@ function githubLanguages (opt) {
     });
 }
 
-// Add event listeners to project images
+// Add event listeners to project images for on-scroll animation
 let projects = document.getElementsByClassName('card');
 for (let p of projects) {
   let a = p.getElementsByTagName('a').item(0)
