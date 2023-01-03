@@ -103,6 +103,6 @@ for (el of progressBars) {
         } else {
             bar.target.classList.add('zero');
         } 
-    }, { root: null, threshold: 0.3, rootMargin: '0' });
+    }, { root: null, threshold: 0.3, rootMargin: '0%' });
     sectionObserver.observe(el);
 }
